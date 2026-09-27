@@ -113,8 +113,9 @@ function getCoverBonus(behindObstacle, takingCover) {
   } else {
     return 2;
   }
-}
 
+  return behindObstacle ? (takingCover ? 4 : 2) : 0;
+}
 /**
  * A creature's current hit points (HP) is reduced by taking damage.
  * If the damage taken is greater than or equal to double its maximum
